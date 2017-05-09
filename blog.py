@@ -12,7 +12,9 @@ import random
 import hashlib
 import hmac
 from string import letters
-
+from escape import escape_html
+import cgi
+import cgitb
 from env import get_secret
 
 #this is the hmac secret var, it is stored in a seperate file 
@@ -288,7 +290,10 @@ class PostPage(Handler):
         if not post:
             self.error(404)
             return
-        self.render("blog_post_permalink.html", post=post, cssid=cssid)
+        if self.user:
+            self.render("blog_post_permalink.html", post=post, cssid=cssid)
+        else:
+            self.redirect("/login")
 
 class NewPost(Handler):
     """On post creation redirect to the post"""
@@ -306,8 +311,11 @@ class NewPost(Handler):
         subject = self.request.get("subject")
         content = self.request.get("content")
 
+        escaped_sub = cgi.escape(subject)
+        escaped_cont = cgi.escape(content)
+
         if subject and content:
-            p = Post(parent=blog_key(), subject=subject, content=content)
+            p = Post(parent=blog_key(), subject=escaped_sub, content=escaped_cont)
             p.put()
             self.redirect('/blog/%s' % str(p.key().id()))
         else:
