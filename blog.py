@@ -13,13 +13,12 @@ import hashlib
 import hmac
 from string import letters
 
-# from env import get_secret
+from env import get_secret
 
 #this is the hmac secret var, it is stored in a seperate file 
 #not included in the public repo. Please create your own secret :)
-# secret = get_secret()
+secret = get_secret()
 
-hash_secret = "thisisasecret"
 
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(
