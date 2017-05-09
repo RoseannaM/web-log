@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web-log</title>
+  <link rel="stylesheet" type="text/css" href="/static/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+ <div id="content">
+  {% block content %} {% endblock %}
+ </div>
+</body>
+<script>
+  $("#new-post textarea").click(function() {
+   $(".error").text("")
+});
+</script>
+</html>

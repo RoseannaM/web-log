@@ -1,0 +1,26 @@
+<div id="nav">
+    {% block nav %}
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <ul class="nav navbar-nav">
+                <li class=""><a href="/">Home</a></li>
+                <li class=""><a href="/blog">Blog Posts</a></li>
+                {% if user %}
+                <li class=""><a href="/blog/newpost">New post</a></li>
+                <li class=""><a href="/logout">Logout</a></li>
+                {%else%}
+                <li class=""><a href="/login">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    <script>
+        $(document).ready(function () {
+            $('li.active').removeClass('active');
+            $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
+        });
+    </script>
+    {% endblock %}
+</div>

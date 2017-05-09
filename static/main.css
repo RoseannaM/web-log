@@ -1,0 +1,236 @@
+.body{
+    font-family: 'Playfair Display', serif;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: red;
+    font-weight: normal;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+}
+
+
+input{
+width: 250px;
+max-width: 250px;
+}
+
+input[type=text], input[type=password] {
+    font-size: 20px;
+    padding: 2px;
+    font-family: monospace;
+}
+
+textarea {
+  width: 500px;
+  height: 400px;
+  font-size: 17px;
+  font-family: monospace;
+}
+
+input[type=submit] {
+  font-size: 24px;
+}
+
+.main-title {
+    display: block;
+    color: #222;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.post + .post {
+    margin-top: 15px;
+}
+
+.post-heading {
+    position: relative;
+    border-bottom: 3px solid #666;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+.post-title:hover {
+ color: #5bdcea;
+}
+
+.post-date {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: #999;
+
+}
+.post-content {
+    margin-top: 5px;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    background-color: #B1EFF5;
+}
+@media (max-width: 769px) {
+    #nav {
+     display: block;
+    }
+}
+#nav .navbar {
+    margin-bottom:0;
+    background-color: #B1EFF5;
+    border: none;
+}
+#nav .navbar a {
+    color: #000;
+    font-size: 20px;
+}
+#nav .navbar-default .navbar-nav>.active>a {
+    background-color: #5bdcea;
+}
+
+
+/*welcome page*/
+
+#welcome-icon {
+    width: 100px;
+    display: block;
+    margin: auto;
+} 
+
+hr {
+   border: none;
+    height: 1px;
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+#access-links {
+    text-align: center;
+}
+.btn {
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-block;
+    width: 150xp;
+    min-width: 150px;
+    margin: 5px;
+}
+#access-links a {
+    font-size: 25px;
+    margin: 5px;
+    color: #000;
+    background-color: rgba(68, 217, 230, 0.42);
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-block;
+    width: 150xp;
+    min-width: 150px;
+}
+
+#access-links a:hover{
+    background-color: #5bdcea;
+}
+
+/*signup page*/
+.center-content{
+ text-align: center;
+}
+.heading-main {
+margin-top: 100px;
+text-align: center
+}
+#sign-up .heading-main, #login .heading-main  {
+margin-top: 70px;
+}
+
+@media (min-width: 992px) {
+    #sign-up .heading-main, #login .heading-main  {
+        text-align: left
+    }
+}
+@media (max-width: 400px) {
+    #sign-up .heading-main, #login .heading-main  {
+        text-align: left;
+        margin-left: 15px; 
+    }
+}
+
+#sign-up label, #login label{
+text-align: left;
+max-width: 250px;
+/*margin: 10px;*/
+margin-left: 0;
+}
+
+#sign-up form, #login form {
+    margin: auto;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#submit-btn {
+    font-size: 25px;
+    color: #000;
+    background-color:#B1EFF5;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+#submit-btn:hover{
+ color: #000;
+ background-color: #5bdcea;
+}
+
+#login .error {
+    font-size: 20px;
+}
+.redirect {
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+   .redirect {
+    width: 250px;
+    max-width: 250px;
+}
+}
+
+/*blog post pages*/
+.heading-main.blog {
+    margin-top: 30px;
+}
+#new-post label{
+    display: block;
+    margin-bottom: 15px;
+}
+
+#new-post input[type=submit]{
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: #000;
+    background-color: #B1EFF5;
+}
+#new-post input[type=submit]:hover{
+    background-color: #5bdcea;
+}
+
+#new-post .error{
+font-size: 20px;
+margin-bottom: 15px;
+}

@@ -1,0 +1,27 @@
+{% extends "base.html"%} {% block content%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 col-md-offset-5">
+            <form class="center-content" id="login" method="post">
+            <h1 class="heading-main">Login</h2>
+            <label>Username
+                <input type="text" name="username" value="{{name}}">
+                <p class="error">{{username_error}}</p>
+                </label>
+                <label>Password
+                    <!-- password value is blank-->
+                    <input type="password" name='password' value="">
+                    <p class="error">{{password_error}}</p>
+                </label>
+                <br>
+                <br>
+                <input id="submit-btn" class="btn" type="submit">
+                <p class="error">{{error}}</p>
+                <br>
+                <p class="redirect">Not registered? <a href="/signup">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content%}

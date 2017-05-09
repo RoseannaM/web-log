@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include 'nav.html' %}   
+<div class="container">
+  <div class="row">
+    <h1 class="heading-main blog">
+      <img id="welcome-icon" src="/static/webblogicon.png">
+    </h1>
+    <div class="col-md-10 col-md-offset-1">
+      <div id="{{cssid}}">
+    {{post.render()}}
+    </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

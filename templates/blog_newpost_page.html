@@ -1,0 +1,23 @@
+{% extends "base.html" %} 
+{% block content %} 
+{% include 'nav.html' %}
+<div class="container">
+  <div class="row">
+    <h1 class="heading-main blog">Create New Post</h2>
+      <div class="col-md-10 col-md-offset-1">
+        <form id="new-post" method="post">
+          <label>
+          <div>Subject</div>
+          <input type="text" name="subject" value="{{subject}}">
+          </label>
+          <label>
+          <div>Blog</div>
+          <div class="error">{{error}}</div>
+          <textarea name="content">{{content}}</textarea>
+          </label>
+          <input class="btn" type="submit">
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

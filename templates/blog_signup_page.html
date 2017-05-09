@@ -1,0 +1,59 @@
+{% extends "base.html"%} {% block content%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 col-md-offset-5">
+            <form class="center-content" id="sign-up" method="post">
+            <h1 class="heading-main">Signup</h2>
+            <label>Username
+                <input type="text" name="username" value="{{name}}">
+                <p class="error">{{username_error}}</p>
+                </label>
+                <label>Password
+                    <!-- password value is blank-->
+                    <input type="password" name='password' value="">
+                    <p class="error">{{password_error}}</p>
+                </label>
+                <label>Verify Password
+                    <input type="password" name='verify' value="{{verify}}">
+                    <p class="error">{{verify_error}}</p>
+                </label>
+                <label>Email (optional)
+                    <input type="text" name='email' value="{{email}}">
+                    <p class="error">{{email_error}}</p>
+                </label>
+                <br>
+                <br>
+                <input id="submit-btn" class="btn" type="submit">
+                
+            </form>
+            <p class="redirect">Allready registered? <a href="/login">Login</a></p>
+        </div>
+    </div>
+</div>
+{% endblock content%}
+
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+    }
+    
+    label {
+        font-weight: bold;
+    }
+    
+    input {
+        margin: 3px 0 3px;
+    }
+    
+    #submit-btn {
+        width: 100px;
+    }
+    
+    .error {
+        margin: 0;
+        color: red;
+    }
+</style>
