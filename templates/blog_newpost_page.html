@@ -8,12 +8,12 @@
         <form id="new-post" method="post">
           <label>
           <div>Subject</div>
-          <input type="text" name="subject" value="{{subject}}">
+          <input type="text" name="subject" value="{{subject|e}}">
           </label>
           <label>
           <div>Blog</div>
           <div class="error">{{error}}</div>
-          <textarea name="content">{{content}}</textarea>
+          <textarea name="content">{{content|e}}</textarea>
           </label>
           <input class="btn" type="submit">
         </form>

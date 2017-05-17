@@ -79,6 +79,23 @@ input[type=submit] {
 .post-content {
     margin-top: 5px;
 }
+.post-info{
+    float: right
+}
+.post-info a {
+    color: black;
+}
+
+.post-info a:hover {
+    color: red;
+    text-decoration: blink;
+}
+
+#author {
+font-weight: bold;
+}
+
+
 
 #nav {
     display: flex;
@@ -225,6 +242,7 @@ margin-left: 0;
     font-size: 25px;
     color: #000;
     background-color: #B1EFF5;
+    margin-left: 0;
 }
 #new-post input[type=submit]:hover{
     background-color: #5bdcea;
@@ -234,3 +252,18 @@ margin-left: 0;
 font-size: 20px;
 margin-bottom: 15px;
 }
+
+#new-post textarea {
+    width: 100%;
+     resize: none;
+}
+
+ .modal-body{
+    color: red;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .modal-footer, .modal-header{
+  border: none!important;
+  }
