@@ -13,8 +13,15 @@
     {{p._render_text}}
   </div>
   <div class="post-info">
-  <p id="author">Posted by {{p.author}} <a class="like-heart" data-id="{{key}}"><i class="fa fa-heart-o"></i> </a>
-  {{ likes }} 
+  <p id="author">Posted by {{p.author}} 
+    <a class="like-heart" data-id="{{key}}">
+      {% if liked %}
+      <i style="color:red" class="fa fa-heart"></i>
+      {% else %}
+      <i class="fa fa-heart-o"></i>
+      {% endif %}
+    </a>
+   {{ likes }}
   </p>
   </div>
 </div>

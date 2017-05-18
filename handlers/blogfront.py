@@ -9,5 +9,5 @@ class BlogFront(Handler):
         """"Get the posts"""
         #select the posts from the db, send to template
         posts = db.GqlQuery("select * from Post order by created desc")
-        self.render('blog_front_page.html', posts=posts)
+        self.render('blog_front_page.html', posts=posts, user=self.user)
         

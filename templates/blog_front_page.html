@@ -7,7 +7,7 @@
     <h1 class="heading-main blog">Posts</h2>
     <div class="col-md-10 col-md-offset-1">
       {% for p in posts %}
-        {{ p.render() }}
+        {{ p.render(user) }}
         <br><br>
       {% endfor %}
     </div>

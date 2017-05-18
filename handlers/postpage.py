@@ -15,6 +15,6 @@ class PostPage(Handler):
             self.error(404)
             return
         if self.user:
-            self.render("blog_post_permalink.html", post=post, cssid=cssid)
+            self.render("blog_post_permalink.html", post=post, cssid=cssid, user=self.user)
         else:
             self.redirect("/login")

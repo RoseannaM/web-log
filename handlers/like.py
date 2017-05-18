@@ -36,11 +36,10 @@ class LikePost(Handler):
             # check if they have allready liked before
             key = str(self.user.key().id_or_name()) + ',' + post_id
             liked = Likes.get_by_key_name(key)
-     
+
             #if not none, that means user liked allready
             if liked is not None:
                 liked.delete()
-                logging.info('delete')
             else:
                 #adding a like with a unique constraint key_name
                 likes = Likes(key_name=str(self.user.key().id_or_name()) + ',' + post_id,
