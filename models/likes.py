@@ -2,8 +2,6 @@
 
 from google.appengine.ext import db
 
-from utils import render_str
-
 class Likes(db.Model):
     """The Like model"""
     #the user who liked the post

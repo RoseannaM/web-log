@@ -20,7 +20,6 @@ class NewPost(Handler):
 
     def post(self):
         """Create Post in db"""
-        logging.info("newpost")
         if not self.user:
             self.redirect('/blog')
             return

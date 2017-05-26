@@ -91,12 +91,55 @@ input[type=submit] {
     text-decoration: blink;
 }
 
+.post .btn{
+    font-size: 15px;
+    margin: 5px;
+    margin-left: 0;
+    color: #000;
+    background-color: rgba(68, 217, 230, 0.42);
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-block;
+    width: 120px;
+    min-width: 120px;    
+}
+
+.post #delete-btn{
+    background-color: #fbafd3;
+
+}
+.post #edit-btn{
+    background-color: #87ef89;
+
+}
+#comment-box{
+    margin: 0;
+    padding:0;
+}
+#comment-modal #yes, #delete-post-modal #post-yes{
+    font-size: 15px;
+    margin: 5px;
+    margin-left: 0;
+    color: #000;
+    background-color: rgba(68, 217, 230, 0.42);
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-block;
+    width: 120px;
+    min-width: 120px;
+}
+
+#comment-modal #no, #delete-post-modal #post-no{
+    width: 120px;
+    min-width: 120px
+}
 #author {
 font-weight: bold;
 }
 
-
-
+.comment-icon .fa-times:hover{
+     cursor: pointer;
+}
 #nav {
     display: flex;
     justify-content: center;

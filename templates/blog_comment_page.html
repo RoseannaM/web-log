@@ -1,0 +1,15 @@
+<!--the template to be included in the post -->
+<div class="comment">
+    <div class="comment-content">
+        {{c._render_text}}
+    </div>
+    <div class="comment-info">
+     <p id="author">Posted by {{c.user}}
+        <a class="comment-icon" data-id="{{key}}">
+        {% if user == c.user %}
+        <i style="color:red" class="fa fa-times"></i>
+        {% endif %}
+        </a>
+     </p>
+    </div>
+</div>

@@ -15,6 +15,10 @@ def render_str(template, **params):
     t = jinja_env.get_template(template)
     return t.render(params)
 
+def render(self, template, **kw):
+    """render template"""
+    self.write(self.render_str(template, **kw))
+
 def blog_key(name='default'):
     """Sets value of the blog's parent"""
     return db.Key.from_path('blogs', name)

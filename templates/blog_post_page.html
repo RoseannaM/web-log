@@ -1,3 +1,4 @@
+<!--the template to be included in the commentt -->
 <div class="post">
   <div class="post-heading">
     <a href="/blog/{{key}}" class="post-title">
@@ -8,10 +9,10 @@
       {{p.created.strftime("%b %d, %Y")}}
     </div>
   </div>
-
   <div class="post-content">
     {{p._render_text}}
   </div>
+  <hr>
   <div class="post-info">
   <p id="author">Posted by {{p.author}} 
     <a class="like-heart" data-id="{{key}}">
@@ -23,5 +24,17 @@
     </a>
    {{ likes }}
   </p>
+  </div>
+  <a class="btn" href="/blog/{{key}}/addcomment">Add Comment</a>
+   {% if p.author == user.name%}
+      <a class="btn" id="edit-btn" data-id="{{key}}">Edit Post</a>
+      <a class="btn" id="delete-btn" data-id="{{key}}">Delete Post</a>
+   {% endif %}
+  <h4>Comments</h2>
+   <div id="comment-box" class="">
+     {% for c in comments %}
+        {{ c.render(user) }}
+        <br>
+      {% endfor %}
   </div>
 </div>

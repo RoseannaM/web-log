@@ -9,6 +9,10 @@ from blogfront import BlogFront
 from newpost import NewPost
 from postpage import PostPage
 from like import LikePost
+from comment import Comment
+from deletecomment import DeleteComment
+from deletepost import DeletePost
+
 
 
 

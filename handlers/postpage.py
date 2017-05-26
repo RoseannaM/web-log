@@ -7,6 +7,9 @@ from utils import blog_key
 class PostPage(Handler):
     """Post page"""
     def get(self, post_id):
+        if not self.user:
+            self.redirect("/login")
+            return
         """Blog post"""
         key = db.Key.from_path('Post', int(post_id), parent=blog_key())
         post = db.get(key)
