@@ -12,6 +12,7 @@ from like import LikePost
 from comment import Comment
 from deletecomment import DeleteComment
 from deletepost import DeletePost
+from editpost import EditPost
 
 
 

@@ -19,7 +19,7 @@ class Post(db.Model):
     def render(self, user):
 
         key = self.key().id_or_name()
-        logging.info(user.name)
+
         """Renders each blog post"""
         #get the number of likes from the Likes model to pass
         #to the template

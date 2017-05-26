@@ -27,7 +27,7 @@
   </div>
   <a class="btn" href="/blog/{{key}}/addcomment">Add Comment</a>
    {% if p.author == user.name%}
-      <a class="btn" id="edit-btn" data-id="{{key}}">Edit Post</a>
+      <a class="btn" href="/blog/{{key}}/editpost" id="edit-btn">Edit Post</a>
       <a class="btn" id="delete-btn" data-id="{{key}}">Delete Post</a>
    {% endif %}
   <h4>Comments</h2>

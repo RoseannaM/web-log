@@ -275,19 +275,19 @@ margin-left: 0;
 .heading-main.blog {
     margin-top: 30px;
 }
-#new-post label{
+#new-post label, #edit-post label{
     display: block;
     margin-bottom: 15px;
 }
 
-#new-post input[type=submit]{
+#new-post input[type=submit], #edit-post input[type=submit]{
     margin-bottom: 30px;
     font-size: 25px;
     color: #000;
     background-color: #B1EFF5;
     margin-left: 0;
 }
-#new-post input[type=submit]:hover{
+#new-post input[type=submit]:hover,  #edit-post input[type=submit]:hover{
     background-color: #5bdcea;
 }
 
@@ -296,7 +296,7 @@ font-size: 20px;
 margin-bottom: 15px;
 }
 
-#new-post textarea {
+#new-post textarea, #edit-post textarea{
     width: 100%;
      resize: none;
 }
