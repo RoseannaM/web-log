@@ -28,7 +28,7 @@ class EditPost(Handler):
             subject = post.subject
             content = post.content
             author = post.author
-            self.render("blog_edit_post_page.html", subject=subject,
+            self.render("blog_edit_post_page.html", key=post_id, subject=subject,
                         content=content, author=author, user=self.user)
         else:
             self.redirect("/login")
@@ -48,11 +48,27 @@ class EditPost(Handler):
         escaped_cont = cgi.escape(content)
 
         if subject and content and author:
-            post = Post(parent=blog_key(), subject=escaped_sub, content=escaped_cont, author=author)
-            post.put()
+            key = db.Key.from_path('Post', int(post_id), parent=blog_key())
+            post = db.get(key)
 
-            self.redirect('/blog/%s' % str(post.key().id()))
+            user = self.user.name
+            post_author = post.author
+
+            #confirm the post exists and the user is the author
+            if post and user == post_author:
+
+                post.content = content
+                post.subject = subject
+                post.put()
+
+                self.redirect('/blog/%s' % str(post.key().id()))
         else:
-            error = "Subject and content not included"
-            self.render("blog_edit_post_page.html", subject=subject,
+            if subject:
+                error = "Content not included"
+            if content:
+                error = "Subject not included"
+            else:
+                error = "Subject  and Content not included"
+                
+            self.render("blog_edit_post_page.html", key=post_id, subject=subject,
                         content=content, author=author, error=error)

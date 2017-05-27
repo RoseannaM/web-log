@@ -24,12 +24,19 @@ class LikePost(Handler):
         # get post
         key = db.Key.from_path('Post', int(post_id), parent=blog_key())
         blogpost = db.get(key)
+
+        #confirm existance of the post
+        if not blogpost:
+            self.error(404)
+            return
+
         author = blogpost.author
         user = self.user.name
 
         #user can't like their own posts
         if user == author:
             self.error(400)
+            return
 
         #if user is not the author of the post
         if user != author:

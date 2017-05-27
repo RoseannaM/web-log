@@ -8,5 +8,6 @@ class Logout(Handler):
     def get(self):
         self.logout()
         self.redirect('/')
+        return
 
 

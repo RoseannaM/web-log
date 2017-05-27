@@ -106,11 +106,25 @@ input[type=submit] {
 
 .post #delete-btn{
     background-color: #fbafd3;
-
 }
 .post #edit-btn{
     background-color: #87ef89;
-
+}
+#cancel-post-btn{
+    min-width: 200px;
+    background-color: #87ef89;
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: #000;
+    margin-left: 0;
+}
+ #cancel-edit-btn{
+    min-width: 200px;
+    background-color: #87ef89;
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: #000;
+    margin-left: 0;
 }
 #comment-box{
     margin: 0;
@@ -139,6 +153,15 @@ font-weight: bold;
 
 .comment-icon .fa-times:hover{
      cursor: pointer;
+     color: #777;
+}
+.fa-pencil-square:hover{
+     color: #777;
+     cursor: pointer;
+}
+
+.comment-fa:nth-child(2){
+    margin: 0 5px;
 }
 #nav {
     display: flex;
@@ -280,14 +303,14 @@ margin-left: 0;
     margin-bottom: 15px;
 }
 
-#new-post input[type=submit], #edit-post input[type=submit]{
+#new-post input[type=submit], #edit-post input[type=submit] {
     margin-bottom: 30px;
     font-size: 25px;
     color: #000;
     background-color: #B1EFF5;
     margin-left: 0;
 }
-#new-post input[type=submit]:hover,  #edit-post input[type=submit]:hover{
+#new-post input[type=submit]:hover, #edit-post input[type=submit]:hover{
     background-color: #5bdcea;
 }
 

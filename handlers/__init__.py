@@ -13,7 +13,7 @@ from comment import Comment
 from deletecomment import DeleteComment
 from deletepost import DeletePost
 from editpost import EditPost
-
+from editcomment import EditComment
 
 
 

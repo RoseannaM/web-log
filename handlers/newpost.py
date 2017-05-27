@@ -38,6 +38,12 @@ class NewPost(Handler):
 
             self.redirect('/blog/%s' % str(post.key().id()))
         else:
-            error = "Subject and content not included"
+            if subject:
+                error = "Content not included"
+            elif content:
+                error = "Subject not included"
+            else:
+                error = "Subject and Content not included"
+
             self.render("blog_newpost_page.html", subject=subject,
                         content=content, author=author, error=error)

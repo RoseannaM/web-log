@@ -3,15 +3,11 @@
 {% include 'nav.html' %}
 <div class="container">
   <div class="row">
-    <h1 class="heading-main blog">Edit Post</h2>
+    <h1 class="heading-main blog">Edit Comment</h2>
       <div class="col-md-10 col-md-offset-1">
-        <form id="edit-post" method="post">
-          <label>
-          <div>Subject</div>
-          <input type="text" name="subject" value="{{subject|e}}">
-          </label>
-          <label>
-          <div>Blog</div>
+        <form id="new-post" method="post">
+         <label>
+          <div>Comment</div>
           <div class="error">{{error}}</div>
           <textarea name="content">{{content|e}}</textarea>
           </label>

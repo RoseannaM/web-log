@@ -5,11 +5,14 @@
     </div>
     <div class="comment-info">
      <p id="author">Posted by {{c.user}}
-        <a class="comment-icon" data-id="{{key}}">
         {% if user == c.user %}
+        <a class="comment-icon comment-fa" data-id="{{key}}">
         <i style="color:red" class="fa fa-times"></i>
-        {% endif %}
         </a>
+        <a class="comment-icon-edit comment-fa" href="/blog/{{key}}/editcomment" data-id="{{key}}">
+        <i style="color:#0f9400;" class="fa fa-pencil-square"></i>
+        </a>
+        {% endif %}   
      </p>
     </div>
 </div>
